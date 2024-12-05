@@ -686,7 +686,7 @@ function confirmAppointment() {
     alert("Your appointment has been confirmed!");
 
     // Optionally, redirect to a confirmation page or show the details
-    window.location.href = "appointment-dashboard.html"; 
+    window.location.href = "dashboard.html"; 
   } else {
     alert("Please log in to confirm your appointment.");
     window.location.href = "login.html"; // Redirect to login if not logged in
