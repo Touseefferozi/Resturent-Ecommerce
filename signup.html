@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restoran</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/433/433036.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- goole font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- close  -->
+    <!-- AOS animation  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <style>
+
+    .navbar ul li a{
+      text-decoration: none;
+      color:gold;
+      display: block;
+      cursor: pointer;
+      
+      }
+  </style>
+
+  <body>
+ 
+      <div class="main-nav">
+        <div
+          class="container"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
+          <div class="row">
+            <div class="col-12 col-lg-3">
+              <div class="logo">
+                <h1>
+                  <i class="fa-solid fa-utensils"></i>
+                  Restorn
+                </h1>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-5">
+              <div class="navbar">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="dashbood.html">Dashboard</a></li>
+                  <li><a href="login.html" id="loginBtn">Login</a></li>
+                  <li><a href="profile.html" id="profileBtn" class="hidden">Profile</a></li>
+                  <li><a href="#" id="logoutBtn" class="hidden" onclick="logoutUser()">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div class="butn">
+                <button class="btn btn-warning">BOOK A TABLE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--nav close  -->
+
+<!-- Signup Page  -->
+<div class="signup-page">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+          <div class="signup-box">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Enter a strong password" required>
+              </div>
+              <button type="button" onclick="validateAndSignup()" class="btn btn-primary btn-block">Sign Up</button>
+            </form>
+            <p class="text-center mt-3">
+              Already have an account? <a href="login.html">Log in</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- close  -->
+      
+
+
+          <!-- footer  -->
+    <div class="foot">
+      <div class="container" data-aos="fade-up" data-aos-duration="3000">
+        <div class="row">
+          <div class="col-12 col-lg-3">
+            <div class="footer">
+              <div class="company">
+                <h3>Company</h3>
+                <ul>
+                  <li><a href="">About us</a></li>
+                  <li><a href="">Contact us</a></li>
+                  <li><a href="">Services</a></li>
+                  <li><a href="">Our Pags</a></li>
+                  <li><a href="">Login</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-3">
+            <div class="footer">
+              <div class="conatct">
+                <h3>Contact</h3>
+                <h4>
+                  <i class="fa fa-map-marker"></i>
+                  123 Street, New York, USA
+                </h4>
+
+                <h4>
+                  <i class="fa fa-phone"></i>
+
+                  +012 345 67890
+                </h4>
+
+                <h4>
+                  <i class="fa fa-envelope-o"></i>
+
+                  info@example.com
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-3">
+            <div class="footer">
+              <div class="opning">
+                <h3>Opning</h3>
+                <h4>Monday-Saturday</h4>
+                <span>09AM - 09PM</span>
+
+                <h4>Sunday</h4>
+                <span>09AM - 09PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-3">
+            <div class="footer">
+              <div class="newsletter">
+                <h3>Newsletter</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <input type="text" placeholder="Your Email" />
+                <button class="btn btn-success">SIGNUP</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="last-foot">
+              <h5>
+                © Your Site Name, All Right Reserved. Designed By HTML Codex
+              </h5>
+
+              <h6>Distributed By ThemeWagon</h6>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="last-foot-2">
+              <span>Home</span>
+              <span>Cookies</span>
+              <span>Help</span>
+              <span>FAQs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- close  -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.fancybox.min.js"
+    ></script>
+    <script type="text/javascript" src="assets/js/wow.js"></script>
+    <script type="text/javascript" src="assets/js/functions.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

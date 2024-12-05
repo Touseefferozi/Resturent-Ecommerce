@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restoran</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/433/433036.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- goole font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- close  -->
+    <!-- AOS animation  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+
+
+
+    <div class="main">
+      <div class="main-nav">
+        <!-- <div class="hamburger" onclick="toggleMenu()">☰</div> -->
+
+        <div
+          class="container"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
+          <div class="row">
+            <div class="col-12 col-lg-3">
+              <div class="logo">
+                <h1>
+                  <i class="fa-solid fa-utensils"></i>
+                   Restorn
+                </h1>
+              </div>
+            </div>
+
+
+            <!-- Toggle btn  -->
+            <div class="menu-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+
+
+            <!-- close  -->
+
+            <div class="col-12 col-lg-5">
+              <div class="navbar">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="dashbood.html">Dashboard</a></li>
+                  <li><a href="#" id="loginBtn">Login</a></li>
+                  <li><a href="profile.html" id="profileBtn" class="hidden">Profile</a></li>
+                  <li><a href="#" id="logoutBtn" class="hidden" onclick="logoutUser()">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+
+
+              <div class="butn">
+
+                <div id="userProfile"></div>
+                <button class="btn btn-warning" id="loginBtn" onclick="window.location.href='login.html'">Login</button>
+                <button id="logoutBtn" style="display:none" onclick="logoutUser()">Logout</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- nav close  -->
+      <div class="mein-banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="banner-text" data-aos="zoom-in-right">
+                <h1>
+                  Enjoy Our <br />
+                  Delicious Meal
+                </h1>
+                <p>
+                  Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+                  Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
+                  sed stet lorem sit clita duo justo magna dolore erat amet
+                </p>
+                <button class="btn btn-warning">BOOK A TABLE</button>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="baaner">
+                <img
+                  src="https://themewagon.github.io/restoran/img/hero.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- banner close  -->
+
+    <!-- Card  -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="card">
+            <h2>
+              <i class="fa fa-3x fa-user-tie"></i><br />
+              Master Chefs
+            </h2>
+            <p>
+              ipsa illo quas consequatur laudantium. Neque. illo quas
+              consequatur laudantium
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3">
+          <div class="card">
+            <h2>
+              <i class="fa-solid fa-utensils"></i><br />
+              Quality Food
+            </h2>
+            <p>
+              ipsa illo quas consequatur laudantium. Neque. illo quas
+              consequatur laudantium
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3">
+          <div class="card">
+            <h2>
+              <i class="fa fa-3x fa-cart-plus"></i><br />
+              Online Order
+            </h2>
+            <p>
+              ipsa illo quas consequatur laudantium. Neque. illo quas
+              consequatur laudantium
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3">
+          <div class="card">
+            <h2>
+              <i class="fa fa-3x fa-headset"></i><br />
+              24/7 Service
+            </h2>
+            <p>
+              ipsa illo quas consequatur laudantium. Neque. illo quas
+              consequatur laudantium
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- close  -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="images">
+            <img
+              class="image1"
+              src="https://themewagon.github.io/restoran/img/about-1.jpg"
+              alt=""
+              data-aos="fade-up-right"
+            />
+            <img
+              class="image2"
+              src="https://themewagon.github.io/restoran/img/about-2.jpg"
+              alt=""
+              data-aos="fade-up-left"
+            />
+
+            <img
+              class="image3"
+              src="https://themewagon.github.io/restoran/img/about-3.jpg"
+              alt=""
+              data-aos="fade-down-right"
+            />
+            <img
+              class="image4"
+              src="https://themewagon.github.io/restoran/img/about-4.jpg"
+              alt=""
+              data-aos="fade-down-left"
+            />
+          </div>
+        </div>
+
+        <div class="main-2">
+          <div class="col-12 col-lg-6">
+            <div class="about">
+              <h2>about us</h2>
+              <br />
+              <h1>
+                Welcome To
+                <i class="fa-solid fa-utensils"></i>
+                Restoran
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
+                quia doloribus odio voluptatibus incidunt possimus aliquam
+                mollitia dolor debitis harum est id reiciendis architecto.
+              </p>
+              <br />
+              <p>
+                dicta laboriosam tempora accusantium quam dolorum, nesciunt
+                cupiditate quisquam ad unde, laborum nobis natus enim facilis
+                eaque cumque non rerum! Adipisci, libero maiores laudantium cum
+                nesciunt,
+              </p>
+              <div class="years">
+                <h1 class="span-1">
+                  <span>15 </span> Years of <br />
+                  Experiance
+                </h1>
+                <h1 class="span-2">
+                  <span>50 </span> Popular <br />
+                  Msster Chef
+                </h1>
+                <button class="btn btn-warning">READ MORE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- close  -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="food">
+            <h2>Food Menu</h2>
+          </div>
+          <h1 class="items">Most Popular Items</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- w3school Tabs  -->
+
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'London')">
+        Papular-BreakFast
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">
+        Special-Lunch
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+        Lovely-Dinner
+      </button>
+    </div>
+
+    <div id="London" class="tabcontent">
+      <h3>London</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+      <h3>Paris</h3>
+      <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <!-- close  -->
+
+    <div class="main-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="vedio">
+              <video
+                width="640"
+                height="720"
+                controls
+                class="poster"
+                poster="https://themewagon.github.io/restoran/img/video.jpg"
+              >
+                <source
+                  class="source"
+                  src="3769033-hd_1920_1080_25fps.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6" data-aos="zoom-in-up">
+            <div class="form">
+              <h3>Reservation</h3>
+              <h1>Book A Table Online</h1>
+
+              <input class="name" type="text" placeholder="Name" id="userName" /><br>
+              <input class="email" type="email" placeholder="Email" id="userEmail" /><br>
+              <input type="datetime-local" placeholder="Date & Time" id="appointmentDate" /><br>
+              <input type="text" placeholder="How Many People" id="numPeople" /><br>
+              <textarea placeholder="Additional Comments" id="comments"></textarea><br>
+          
+              <center>
+                  <button onclick="confirmAppointment()" class="btn btn-warning">Confirm Appointment</button>
+              </center>
+          
+          
+              <!-- <button class="btn btn-warning" >BOOK A TABLE</button> -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- close  -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="food">
+            <h2>Team Member</h2>
+          </div>
+          <h1 class="items">Our Master Chefs</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-duration="2000">
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="cardss">
+            <img
+              src="https://themewagon.github.io/restoran/img/team-1.jpg"
+              alt=""
+            />
+            <h3>Main Chef</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3">
+          <div class="cardss">
+            <img
+              src="https://themewagon.github.io/restoran/img/team-2.jpg"
+              alt=""
+            />
+            <h3>Main Chef</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3">
+          <div class="cardss">
+            <img
+              src="https://themewagon.github.io/restoran/img/team-3.jpg"
+              alt=""
+            />
+            <h3>Main Chef</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3">
+          <div class="cardss">
+            <img
+              src="https://themewagon.github.io/restoran/img/team-4.jpg"
+              alt=""
+            />
+            <h3>Main Chef</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- close  -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="food">
+            <h2>Testimonial</h2>
+          </div>
+          <h1 class="items">Our Clients Say!!!</h1>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container"
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+    >
+      <div class="row autoplay">
+        <div class="col-12 col-lg-4">
+          <div class="last-card">
+            <i class="fa fa-quote-left fa-2x"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              eos dicta perspiciatis temporibus praesentium nostrum rerum eum
+              animi doloremque ullam?
+            </p>
+            <img
+              src="https://themewagon.github.io/restoran/img/testimonial-4.jpg"
+              alt=""
+            />
+            <h3>Julia Smit</h3>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="last-card">
+            <i class="fa fa-quote-left fa-2x"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              eos dicta perspiciatis temporibus praesentium nostrum rerum eum
+              animi doloremque ullam?
+            </p>
+            <img
+              src="https://themewagon.github.io/restoran/img/testimonial-2.jpg"
+              alt=""
+            />
+            <h3>Johnson</h3>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="last-card">
+            <i class="fa fa-quote-left fa-2x"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              eos dicta perspiciatis temporibus praesentium nostrum rerum eum
+              animi doloremque ullam?
+            </p>
+            <img
+              src="https://themewagon.github.io/restoran/img/testimonial-3.jpg"
+              alt=""
+            />
+            <h3>Harry Alberty</h3>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="last-card">
+            <i class="fa fa-quote-left fa-2x"></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              eos dicta perspiciatis temporibus praesentium nostrum rerum eum
+              animi doloremque ullam?
+            </p>
+            <img
+              src="https://themewagon.github.io/restoran/img/testimonial-1.jpg"
+              alt=""
+            />
+            <h3>Alax john</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- close  -->
+     
+    <!-- footer  -->
+    <div class="foot">
+      <div class="container" data-aos="fade-up" data-aos-duration="3000">
+        <div class="row">
+          <div class="col-12 col-lg-3">
+            <div class="footer">
+              <div class="company">
+                <h3>Company</h3>
+                <ul>
+                  <li><a href="">About us</a></li>
+                  <li><a href="">Contact us</a></li>
+                  <li><a href="">Services</a></li>
+                  <li><a href="">Our Pags</a></li>
+                  <li><a href="">Login</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-3">
+            <div class="footer">
+              <div class="conatct">
+                <h3>Contact</h3>
+                <h4>
+                  <i class="fa fa-map-marker"></i>
+                  123 Street, New York, USA
+                </h4>
+
+                <h4>
+                  <i class="fa fa-phone"></i>
+
+                  +012 345 67890
+                </h4>
+
+                <h4>
+                  <i class="fa fa-envelope-o"></i>
+
+                  info@example.com
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-3">
+            <div class="footer">
+              <div class="opning">
+                <h3>Opning</h3>
+                <h4>Monday-Saturday</h4>
+                <span>09AM - 09PM</span>
+
+                <h4>Sunday</h4>
+                <span>09AM - 09PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-3">
+            <div class="footer">
+              <div class="newsletter">
+                <h3>Newsletter</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <input type="text" placeholder="Your Email" />
+                <button class="btn btn-success">SIGNUP</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="last-foot">
+              <h5>
+                © Your Site Name, All Right Reserved. Designed By HTML Codex
+              </h5>
+
+              <h6>Distributed By ThemeWagon</h6>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="last-foot-2">
+              <span>Home</span>
+              <span>Cookies</span>
+              <span>Help</span>
+              <span>FAQs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- close  -->
+
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+
+<script>
+
+  
+</script>
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.fancybox.min.js"
+    ></script>
+    <script type="text/javascript" src="assets/js/wow.js"></script>
+    <script type="text/javascript" src="assets/js/functions.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    
+
+  </body>
+</html>

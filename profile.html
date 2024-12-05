@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restoran</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/433/433036.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- goole font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- close  -->
+    <!-- AOS animation  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+      
+      body {
+        background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      
+      .profile-card {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        width: 90%; /* Adjusted for smaller screens */
+        max-width: 350px; /* Keep it centered and limited on larger screens */
+        text-align: center;
+        padding: 20px;
+        animation: fadeIn 1s ease-in-out;
+        margin-top: 2pc; /* Removed fixed margins for better responsiveness */
+      }
+      
+      .profile-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 4px solid #ff6f61;
+        margin: 0 auto;
+        animation: scaleUp 1s ease-in-out;
+      }
+      
+      .user-info {
+        margin-top: 15px;
+      }
+      
+      .user-info h1 {
+        font-size: 22px;
+        color: #333;
+      }
+      
+      .user-info p {
+        color: #666;
+        font-size: 14px;
+      }
+      
+      .actions {
+        margin-top: 20px;
+      }
+      
+      .actions button {
+        background: #ff6f61;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .actions button:hover {
+        background: #ff3b2f;
+      }
+      
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes scaleUp {
+        0% {
+          transform: scale(0.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .profile-card {
+          width: 95%; /* Stretch card to fill more space on smaller devices */
+          margin-top: 1pc;
+        }
+      
+        .user-info h1 {
+          font-size: 20px; /* Adjust font size for better readability */
+        }
+      
+        .actions button {
+          font-size: 14px; /* Adjust button font size */
+          padding: 8px 15px; /* Reduce padding */
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .profile-card {
+          width: 100%; /* Use full width for very small screens */
+          margin: 0 auto;
+          padding: 15px;
+          margin-top: 16pc;
+        }
+      
+        .profile-image {
+          width: 80px;
+          height: 80px;
+        }
+      
+        .user-info h1 {
+          font-size: 18px;
+        }
+      
+        .user-info p {
+          font-size: 12px;
+        }
+      
+        .actions button {
+          font-size: 13px;
+          padding: 7px 12px;
+        }
+      }
+      
+  </style>
+  <body>
+
+
+
+    <div class="main">
+      <div class="main-nav">
+        <!-- <div class="hamburger" onclick="toggleMenu()">☰</div> -->
+
+        <div
+          class="container"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
+          <div class="row">
+            <div class="col-12 col-lg-3">
+              <div class="logo">
+                <h1>
+                  <i class="fa-solid fa-utensils"></i>
+                   Restorn
+                </h1>
+              </div>
+            </div>
+
+
+            <!-- Toggle btn  -->
+            <div class="menu-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+
+
+            <!-- close  -->
+
+            <div class="col-12 col-lg-5">
+              <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashbood.html">Dashboard</a></li>
+                    <li><a href="login.html" id="loginBtn">Login</a></li>
+                    <li><a href="profile.html" id="profileBtn" class="hidden">Profile</a></li>
+                    <li><a href="#" id="logoutBtn" class="hidden" onclick="logoutUser()">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+
+
+              <div class="butn">
+
+                <div id="userProfile"></div>
+                <button class="btn btn-warning" id="loginBtn" onclick="window.location.href='login.html'">Login</button>
+                <button id="logoutBtn" style="display:none" onclick="logoutUser()">Logout</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- nav close  -->
+
+
+  <div class="profile-card">
+    <img src="https://via.placeholder.com/100" alt="User Image" class="profile-image">
+    <div class="user-info">
+      <h1 id="userEmail">Welcome, User!</h1>
+      <p>Your personalized dashboard</p>
+    </div>
+    <div class="actions">
+      <button onclick="logoutUser()">Logout</button>
+    </div>
+  </div>
+
+  <script>
+    // Retrieve and display user email
+    const storedEmail = localStorage.getItem("userEmail");
+    if (storedEmail) {
+      document.getElementById("userEmail").textContent = `Welcome, ${storedEmail}`;
+    } else {
+      document.getElementById("userEmail").textContent = "Welcome, Guest!";
+    }
+
+    // Logout functionality
+    function logoutUser() {
+      localStorage.setItem("isLoggedIn", "false");
+      alert("You have been logged out!");
+      window.location.href = "login.html";
+    }
+  </script>
+
+        
+  
+
+
+
+
+
+
+
+
+          <!-- footer  -->
+    <div class="foot">
+        <div class="container" data-aos="fade-up" data-aos-duration="3000">
+          <div class="row">
+            <div class="col-12 col-lg-3">
+              <div class="footer">
+                <div class="company">
+                  <h3>Company</h3>
+                  <ul>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Our Pags</a></li>
+                    <li><a href="">Login</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-12 col-lg-3">
+              <div class="footer">
+                <div class="conatct">
+                  <h3>Contact</h3>
+                  <h4>
+                    <i class="fa fa-map-marker"></i>
+                    123 Street, New York, USA
+                  </h4>
+  
+                  <h4>
+                    <i class="fa fa-phone"></i>
+  
+                    +012 345 67890
+                  </h4>
+  
+                  <h4>
+                    <i class="fa fa-envelope-o"></i>
+  
+                    info@example.com
+                  </h4>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-12 col-lg-3">
+              <div class="footer">
+                <div class="opning">
+                  <h3>Opning</h3>
+                  <h4>Monday-Saturday</h4>
+                  <span>09AM - 09PM</span>
+  
+                  <h4>Sunday</h4>
+                  <span>09AM - 09PM</span>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-12 col-lg-3">
+              <div class="footer">
+                <div class="newsletter">
+                  <h3>Newsletter</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <input type="text" placeholder="Your Email" />
+                  <button class="btn btn-success">SIGNUP</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div
+          class="container"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="last-foot">
+                <h5>
+                  © Your Site Name, All Right Reserved. Designed By HTML Codex
+                </h5>
+  
+                <h6>Distributed By ThemeWagon</h6>
+              </div>
+            </div>
+  
+            <div class="col-12 col-lg-6">
+              <div class="last-foot-2">
+                <span>Home</span>
+                <span>Cookies</span>
+                <span>Help</span>
+                <span>FAQs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- close  -->
+  
+  
+      <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="fa fa-arrow-up"></i>
+      </button>
+  
+  <script>
+  
+    
+  </script>
+  
+  
+  
+      <script src="assets/js/jquery.min.js"></script>
+      <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="assets/js/slick.js"></script>
+      <script
+        type="text/javascript"
+        src="assets/js/jquery.fancybox.min.js"
+      ></script>
+      <script type="text/javascript" src="assets/js/wow.js"></script>
+      <script type="text/javascript" src="assets/js/functions.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+      <script>
+        AOS.init();
+      </script>
+  
+      
+  
+    </body>
+  </html>
+  

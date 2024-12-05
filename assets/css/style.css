@@ -1,0 +1,1121 @@
+@import url('../css/bootstrap.css');
+@import url('../css/jquery.fancybox.min.css');
+@import url('../css/slick.css');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+
+.main {
+    position: relative; /* Positioning for pseudo-element */
+    background-image: url(https://themewagon.github.io/restoran/img/bg-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60pc;
+    margin-top: -6pc;
+    overflow: hidden;
+
+    /* Fallback background color */
+    background-color: #0F172B; /* Replace with your desired color */
+}
+
+.main::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 43, 0.7); /* Background color with transparency */
+    z-index: 1; /* Ensure this stays above the background image */
+}
+
+.main > * {
+    position: relative; /* Keep child elements above pseudo-element */
+    z-index: 2;
+}
+
+
+
+/* General Styles */
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.main-nav.scrolled {
+    background-color: #0F172B;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 10pc;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #ffc925;
+}
+
+/* Logo Styling */
+.logo h1 {
+    font-size: 36px;
+    color: #ffc925;
+    font-family: initial;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Toggle Button Styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Toggle Animation */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.butn {
+    margin-left: 14pc;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #0F172B;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin: 15px 0;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 2px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+}
+
+/* nav close  */
+
+
+.banner-text{
+
+    margin-top: 9pc;
+
+}
+
+.banner-text h1{
+    color: white;
+    font-family: cursive;
+    margin-bottom: 1pc;
+    font-size: 55px;
+    font-weight: 900;
+}
+
+.banner-text p{
+    color: white;
+    font-size: 20px;
+}
+
+.baaner img{
+    width: 90%;
+    height: 480px;
+    margin-top: 3pc;
+    margin-left: 4pc;
+    animation: Touseef  50s linear infinite;
+    /* position: relative; Ensure positioning for top to work */
+
+}
+.mein-banner{
+
+    margin-top: 14pc;
+
+}
+
+
+@keyframes Touseef {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* close  */
+
+
+.card{
+
+    margin-top: 5pc;
+    margin-bottom: 5pc;
+    height: 250px;
+    border: none;
+    background: white;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+
+}
+
+.card h2 i{
+    color: #ffc925;
+    font-size: 50px;
+    margin-bottom: 12px;
+    margin-top: 2pc;
+}
+
+.card h2{
+    margin-left: 13px;
+    margin-top: 11px;
+    font-size: 20px;
+}
+.card p{
+
+margin-left: 1pc;
+
+}
+
+.card:hover{
+color: white !important ;
+background-color: #ffc925;
+cursor: pointer;
+
+}
+
+.card h2 i:hover{
+color: white !important; 
+
+}
+
+
+/* close  */
+
+    .images{
+
+        display: contents;
+        width: 100%;
+        height: 250px;
+
+    }
+
+    .image1{
+
+        width: 55%;
+        margin-left: -2pc;
+    }
+
+    .image2{
+        padding: 7px 4pc 19px 15px;
+        position: absolute;
+        width: 53%;
+        margin-top: 4pc;
+
+
+    }
+
+    .image3{
+
+        padding: 11px 4pc 13px 25px;
+        position: absolute;
+        width: 53%;
+        margin-top: 19pc;
+        margin-left: -19pc;
+
+    }
+
+    .image4{
+        position: absolute;
+        width: 53%;
+        margin-top: 19pc;
+        margin-left: -2pc;
+    }
+
+    /* close  */
+
+    .about {
+        margin-left: 38pc;
+        margin-right: -37pc;
+        margin-top: -18pc;
+    }
+
+    .about h2{
+        color: #ffc925;
+        font-family: "Dancing Script", cursive;
+
+    }
+
+    .about h2::before{
+
+        content: "";
+        position: absolute;
+        border-bottom-style: solid;
+        width: 88px;
+        height: 62px;
+        border-radius: 3px;
+        margin-top: -37px;
+        margin-left: 8pc;
+
+
+    }
+
+    .about h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .about h1 i{
+    color: #ffc925;
+
+    }
+
+    .about p{
+        font-size: medium;
+
+    }
+
+
+    h1.span-2{
+        margin-left: 20pc;
+        margin-top: -106px;
+        /* color: #ffc925; */
+        margin-bottom: 4pc;
+    }
+
+    h1.span-2::after{
+
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100px;
+        border-left: 5px solid #ffc925;
+        margin-left: -26pc;
+        margin-top: -98px;
+
+    }
+
+
+    h1.span-1 {
+
+        margin-top: 61px;
+        /* color: #ffc925; */
+    }
+
+
+    h1.span-1::after{
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100px;
+        border-left: 5px solid #ffc925;
+        margin-left: 7pc;
+        margin-top: -47px;
+
+    }
+
+    h1 span {
+        color: #ffc925;
+
+    }
+
+
+
+
+    .years h1{
+
+        
+
+    }
+
+
+    h1.span-2, h1.span-1 {
+        font-size: 22px;
+      }
+    
+    
+    @media (min-width: 1024px) {
+      .images {
+        height: 250px; /* Original height for larger screens */
+      }
+    
+      .image1, .image2, .image3, .image4 {
+        width: 53%; /* Original width */
+        margin: 0;
+      }
+    
+      .about {
+        margin: 0 auto;
+        width: 60%; /* Center and resize for desktops */
+        text-align: center;
+      }
+    
+      .about h2 {
+        font-size: 40px;
+      }
+    
+      .about p {
+        font-size: 18px;
+      }
+    
+      h1.span-2, h1.span-1 {
+        font-size: 24px;
+      }
+    }
+
+
+/* close */
+
+.items{
+
+    text-align: center;
+    font-weight: 800;
+    margin-top: -4pc;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+
+}
+
+
+.food{
+
+text-align: center;
+margin-top: 10pc;
+color: orange;
+font-family: "Dancing Script", cursive;
+margin-bottom: 5pc;
+font-size: 30px;
+margin-left: 5px;
+}
+
+.food::after{
+
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: auto;
+    border-bottom-style: solid;
+    margin-top: -24px;
+    margin-left: -11pc;
+
+
+}
+
+
+.food::before{
+
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: auto;
+    border-bottom-style: solid;
+    margin-top: 21px;
+    margin-left: 5pc;
+}
+
+/* w3school tabs  */
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #ffc925;
+    width: 55%;
+    margin-left: 20pc;
+    margin-top: 2pc;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: orange;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    /* background-color: #ccc; */
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+
+  .tablinks{
+
+    margin-left: 4pc;
+
+  }
+
+  .tabcontent p{
+    margin-left: 35pc;
+  }
+
+  .tabcontent h3{
+
+    margin-left: 38pc;
+
+  }
+
+/* close */
+
+
+.main-3 {
+    margin-top: 5pc;
+    background-color: #0F172B;
+    padding: 20px;
+    height: auto; /* Adjust height dynamically */
+    margin-bottom: 0;
+}
+
+.form {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1E293B;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form h3 {
+    color: #ffc925;
+    font-family: "Dancing Script", cursive;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.form h1 {
+    color: white;
+    font-size: 36px;
+    margin: 10px 0 20px;
+}
+
+.form input,
+textarea {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 500px; /* Limit width on larger screens */
+    padding: 12px 15px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.buttons {
+    display: inline-block;
+    padding: 14px 20px;
+    background-color: #ffc925;
+    color: #0F172B;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons:hover {
+    background-color: #d4a915;
+}
+
+.vedio video {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 600px; /* Limit size on larger screens */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-3 {
+        margin-top: 2pc;
+        padding: 10px;
+    }
+
+    .form h1 {
+        font-size: 28px;
+    }
+
+    .form h3 {
+        font-size: 20px;
+    }
+
+    .form input,
+    textarea {
+        font-size: 14px;
+    }
+
+    .buttons {
+        font-size: 18px;
+    }
+
+    .vedio video {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form h1 {
+        font-size: 24px;
+    }
+
+    .form h3 {
+        font-size: 18px;
+    }
+
+    .buttons {
+        font-size: 16px;
+    }
+}
+
+
+/* .source{
+
+width: 100%;
+height: 250PX;
+
+} */
+
+.cardss {
+    margin-top: 2pc;
+    width: 100%;
+    max-width: 400px; /* Limit card width on larger screens */
+    height: auto; /* Dynamic height for responsiveness */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for better aesthetics */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 15px; /* Added padding for spacing */
+    text-align: center; /* Center alignment for content */
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+.cardss img {
+    width: 150px; /* Set a fixed width for images */
+    height: 150px; /* Maintain square dimensions */
+    margin: 0 auto; /* Center align the image */
+    margin-top: 10px;
+    border-radius: 50%; /* Circular image */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.cardss img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a hover shadow effect */
+}
+
+.cardss h3 {
+    margin-top: 15px;
+    font-size: 18px; /* Responsive font size */
+    font-weight: bold;
+    color: #333; /* Neutral text color */
+}
+
+.cardss p {
+    margin-top: 10px;
+    font-size: 14px; /* Smaller font size for mobile */
+    color: #666; /* Subtle text color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cardss {
+        margin-top: 15px;
+        max-width: 100%; /* Full width for smaller screens */
+    }
+
+    .cardss img {
+        width: 120px; /* Adjusted image size */
+        height: 120px;
+    }
+
+    .cardss h3 {
+        font-size: 16px; /* Adjusted heading size */
+    }
+
+    .cardss p {
+        font-size: 13px; /* Adjusted paragraph size */
+    }
+}
+
+@media (max-width: 576px) {
+    .cardss {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .cardss img {
+        width: 100px; /* Further reduced image size for small screens */
+        height: 100px;
+    }
+
+    .cardss h3 {
+        font-size: 14px;
+    }
+
+    .cardss p {
+        font-size: 12px;
+    }
+}
+
+/* close  */
+
+
+.last-card {
+    width: 100%;
+    max-width: 600px; /* Limit max width for larger screens */
+    height: auto; /* Dynamic height for responsiveness */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better aesthetics */
+    margin: 20px auto; /* Centered card with vertical spacing */
+    padding: 15px; /* Add padding for internal spacing */
+    border-radius: 8px; /* Rounded corners */
+    display: flex; /* Use flex for layout */
+    align-items: center; /* Align content vertically */
+    gap: 15px; /* Space between elements */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.last-card i {
+    font-size: 24px; /* Larger icon for visibility */
+    color: #ffc925; /* Eye-catching color */
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.last-card h3 {
+    font-size: 18px; /* Responsive font size */
+    color: #333; /* Neutral text color */
+    margin: 0; /* Reset default margin */
+}
+
+.last-card p {
+    font-size: 14px; /* Smaller paragraph font */
+    color: #666; /* Subtle text color */
+    margin: 5px 0 0 0; /* Adjusted margin for better spacing */
+}
+
+.last-card img {
+    width: 80px; /* Fixed width for images */
+    height: 80px; /* Fixed height for consistent layout */
+    border-radius: 50%; /* Circular images */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.last-card:hover {
+    background-color: orangered;
+    color: white; /* Change text color on hover */
+}
+
+.last-card:hover h3, 
+.last-card:hover p, 
+.last-card:hover i {
+    color: white; /* Ensure all text elements adapt to the hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .last-card {
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start; /* Align content to the left */
+        text-align: left; /* Adjust text alignment */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .last-card img {
+        width: 60px; /* Reduce image size */
+        height: 60px;
+    }
+
+    .last-card h3 {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .last-card p {
+        font-size: 12px; /* Adjust paragraph font size */
+    }
+
+    .last-card i {
+        font-size: 20px; /* Adjust icon size */
+    }
+}
+
+@media (max-width: 576px) {
+    .last-card {
+        padding: 8px; /* Further reduce padding */
+        gap: 10px; /* Reduce spacing */
+    }
+
+    .last-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .last-card h3 {
+        font-size: 14px;
+    }
+
+    .last-card p {
+        font-size: 11px;
+    }
+
+    .last-card i {
+        font-size: 18px;
+    }
+}
+
+
+/* back to top  */
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background-color: #ffc925;
+    color: white;
+    cursor: pointer;
+    padding: 17px;
+    border-radius: 4px;
+    height: 69px;
+  }
+  
+  #myBtn:hover {
+    background-color: orangered;
+  }
+
+/* close  */
+
+.foot {
+    background-color: #0F172B;
+    color: white;
+    margin-top: 5pc;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.footer h3 {
+    color: orange;
+    font-family: "Dancing Script", cursive;
+    margin-top: 20px;
+    margin-left: 10px;
+    position: relative; /* Ensure proper placement */
+}
+
+.footer h3::before {
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid orange;
+    width: 60px;
+    height: 2px;
+    bottom: -5px; /* Adjusted for a clean look */
+    left: 0;
+}
+
+.company ul {
+    list-style: none;
+    padding: 0;
+}
+
+.company ul li {
+    margin: 5px 0;
+}
+
+.company ul li a {
+    text-decoration: none;
+    color: white;
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+.company ul li a:hover {
+    letter-spacing: 2px;
+    color: orange;
+}
+
+.contact h4,
+.opning h4 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.opning span {
+    margin-left: 10px;
+}
+
+.newsletter p {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.newsletter input {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%; /* Adjusted for responsiveness */
+    max-width: 300px; /* Cap the input width */
+}
+
+.btn-success {
+    color: white;
+    background-color: orange;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+    background-color: #e67e22;
+}
+
+.last-foot h5 {
+    font-size: 16px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.last-foot h6 {
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.last-foot-2 {
+    text-align: center; /* Centered content for all screen sizes */
+    margin-top: 20px;
+}
+
+.last-foot-2 span {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .foot {
+        padding: 15px; /* Adjusted padding */
+    }
+
+    .footer h3 {
+        margin-top: 10px;
+        font-size: 18px; /* Adjusted font size */
+    }
+
+    .newsletter input {
+        width: 100%; /* Full width on smaller screens */
+        max-width: none;
+    }
+
+    .btn-success {
+        margin-left: 0; /* Center align on mobile */
+        display: block;
+        margin: 10px auto;
+    }
+
+    .last-foot-2 {
+        padding-left: 0; /* Remove unnecessary padding */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer h3 {
+        font-size: 16px; /* Smaller font size for very small screens */
+    }
+
+    .contact h4,
+    .opning h4,
+    .last-foot h5,
+    .last-foot h6 {
+        font-size: 14px; /* Adjusted for readability */
+    }
+
+    .newsletter input {
+        padding: 8px 10px;
+    }
+}
+
+
+
+/* LOGIn PAGE  */
+
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .login-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20pc;
+    margin-bottom: 10pc;
+  }
+  
+  .login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    color: #0F172B;
+  }
+  
+
+/* close  */
+
+
+/* Signup PAGe  */
+
+
+.signup-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .signup-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .signup-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    color: #0F172B;
+  }
+  
+
+
+/* close  */
+
+
+/* Dashboord */
+
+#appointmentDetails{
+
+color: #0F172B;
+
+}
+
+
+
+/* close  */
+
+
+/* loader  */
+
+/* styles.css */
+
+/* Dashboord PAge  */
+
+
+.Appointment{
+
+margin-top: 8pc;
+
+}
+
+
+/* close  */
+
+
+
+
+
